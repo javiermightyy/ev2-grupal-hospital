@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  basedatos-hospital:
+    image: mysql:8.0
+    container_name: mysql-hospital
+    environment:
+      MYSQL_DATABASE: hospital_reform
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "3306:3306"
+    restart: always
